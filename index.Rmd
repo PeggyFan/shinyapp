@@ -15,7 +15,7 @@ Civic participation is seen as a cornerstone of democracy in fields of political
 
 This app presents data from a question from the World Values Survey (one of the oldest cross-national social surveys in the world) that asks: Are you a member of the following association: sports, arts, labor, politics, environment, women's rights, human rights, charity, or other.
 
-The analyses focus on the gender and education attainment of the __
+The analyses examine the data by gender and education attainment breakdown as those two criteria are relevant characteristcs to civic participation.
 
 ---
 ## The data
