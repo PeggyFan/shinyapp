@@ -1,0 +1,110 @@
+---
+title       : Membership in Associations in 85 countries using the World Values Survey, 1981-2007
+author      : Peggy Fan
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## The question
+
+Civic participation is seen as a cornerstone of democracy in fields of political science, sociology, and education. One way to measure civic participation is looking at the degree to which an individual participates in organizations outside of family and work. Such organizations or associations are often the foundation to social capital and network. 
+
+This app presents data from a question from the World Values Survey (one of the oldest cross-national social surveys in the world) that asks: Are you a member of the following association: sports, arts, labor, politics, environment, women's rights, human rights, charity, or other.
+
+The analyses focus on the gender and education attainment of the __
+
+---
+## The data
+
+The raw data from World Values Survey was cleaned and the variables of interest, gender and educational attainment, were extracted along with some country-level information. The data is further aggregated to the country level for this exercise. However, with a dataset like this:
+
+```{r, echo=FALSE, comment=NULL}
+wvs_c <- read.csv("/Users/peggyfan/Downloads/R_data/Developing_data_products/wvs_c")
+wvs_c <- wvs_c[, -1]
+wvs_c <- wvs_c[1:2, ]
+wvs_c 
+````
+
+It is difficult to observe the trends in terms of regions, gender, and education.
+
+---
+## The App
+
+The app gives graphical and tabular representations of the data to faciliate data exploration.
+It provides the descriptive analyses of associational membership on geagraphy, gender, and education attainment. 
+
+The app gives regional averages by categories, such as this:
+
+```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE, results='asis'}
+library(rworldmap)
+library(plyr)
+library(reshape)
+library(ggplot2)
+
+wvs_c <- read.csv("/Users/peggyfan/Downloads/R_data/Developing_data_products/wvs_c")
+wvs_c <- wvs_c[, -1]
+
+gender <- wvs_c[,c(2, 4:6)]
+highested <- wvs_c[,c(2, 4, 12:17)]
+highested_data <- highested[complete.cases(highested),]
+
+colnames(highested_data) <- c("region", "country", "Primary", "Secondary.incomplete", "Secondary.vocational","Secondary.preparatory", "Tertiary.incomplete", "Tertiary")
+
+highested_data <- highested[complete.cases(highested),]
+colnames(highested_data) <- c("region", "country", "Primary", "Secondary.incomplete", "Secondary.vocational",
+                         "Secondary.preparatory", "Tertiary.incomplete", "Tertiary")
+
+test3<- aggregate(highested_data[, c('Primary','Secondary.incomplete','Secondary.vocational'
+                                     ,'Secondary.preparatory','Tertiary.incomplete','Tertiary')],  
+                  by = list(as.character(highested_data$region)), function(x) c(mean=mean(x)))
+
+colnames(test3)[1] <- "region"
+
+test3 <- melt(test3[, c('region','Primary','Secondary.incomplete','Secondary.vocational'
+                        ,'Secondary.preparatory','Tertiary.incomplete','Tertiary')], id.vars = 1)
+
+test3$region[test3$region=="region1"] <- "North America & Western Europe" 
+test3$region[test3$region=="region2"] <- "Central Europe"
+test3$region[test3$region=="region3"] <- "Asia" 
+test3$region[test3$region=="region4"] <- "Latin American & Caribbean"
+test3$region[test3$region=="region5"] <- "Sub-Saharan Africa" 
+test3$region[test3$region=="region6"] <- "Middle East & North Africa" 
+test3$region[test3$region=="region7"] <- "Oceania" 
+
+d1 <- ggplot(data=test3, aes(x=variable, y=value)) 
+d1 <- d1 + geom_line(aes(group=region, color=region)) 
+d1 <- d1 + geom_point(aes(color=region, shape=region)) 
+d1 <- d1 + labs(y = 'Percent', x = '') + theme(axis.text.x = element_blank()) + ylim(0, 1) +
+          theme(legend.title=element_blank()) + ggtitle("Average rate of being a member")
+d1
+
+```
+
+--- 
+## The App (continued)
+The app also gives country-specific data on gender and education attainment, such as:
+
+```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE, results='asis'}
+x <- gender[(gender$country== "Albania"),]
+x <- melt(x[,c('country','male','female')],id.vars = 1)
+x1 <- ggplot(data=x, aes(x=variable, y=value)) 
+x1 <- x1 + geom_bar(aes(fill = variable), position="dodge", stat="identity")  
+x1 <- x1 + labs(y = 'Percent', x = '') + theme(axis.text.x = element_blank()) + ylim(0, 1) +
+          theme(legend.title=element_blank()) + ggtitle("Average rate of being a member") + 
+          ggtitle(expression(atop("Average rate of being a member", atop("Albania"), "")))
+x1
+
+```
+
+---
+
+## Final words
+
+This app gives a comprehenisve overview of the World Values Survey data and allows you to explore
+with regional and country as units of analyses and making comparisons.
+
+

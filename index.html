@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Membership in Associations in 85 countries using the World Values Survey, 1981-2007</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Membership in Associations in 85 countries using the World Values Survey, 1981-2007">
+  <meta name="author" content="Peggy Fan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Membership in Associations in 85 countries using the World Values Survey, 1981-2007</h1>
+    <h2></h2>
+    <p>Peggy Fan<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The question</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Civic participation is seen as a cornerstone of democracy in fields of political science, sociology, and education. One way to measure civic participation is looking at the degree to which an individual participates in organizations outside of family and work. Such organizations or associations are often the foundation to social capital and network. </p>
+
+<p>This app presents data from a question from the World Values Survey (one of the oldest cross-national social surveys in the world) that asks: Are you a member of the following association: sports, arts, labor, politics, environment, women&#39;s rights, human rights, charity, or other.</p>
+
+<p>The analyses focus on the gender and education attainment of the __</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The raw data from World Values Survey was cleaned and the variables of interest, gender and educational attainment, were extracted along with some country-level information. The data is further aggregated to the country level for this exercise. However, with a dataset like this:</p>
+
+<pre><code>  iso3  region participation country   male female lower.class
+1  ALB region2        0.5263 Albania 0.5834 0.4703      0.4286
+2  AND region1        0.6700 Andorra 0.7237 0.6160      0.4118
+  working.class lower.middle.class upper.middle.class upper.class
+1        0.4745             0.5997             0.6752      0.6429
+2        0.6116             0.6509             0.7624      0.6667
+  primary.education secondary.incomplete secondary.vocational
+1            0.4565               0.4894               0.5608
+2            0.5254               0.6136               0.6815
+  secondary.preparatory tertiary.incomplete tertiary
+1                0.5833              0.6957   0.7283
+2                0.6319              0.7321   0.8326
+</code></pre>
+
+<p>It is difficult to observe the trends in terms of regions, gender, and education.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The app gives graphical and tabular representations of the data to faciliate data exploration.
+It provides the descriptive analyses of associational membership on geagraphy, gender, and education attainment. </p>
+
+<p>The app gives regional averages by categories, such as this:</p>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>The App (continued)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The app also gives country-specific data on gender and education attainment, such as:</p>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Final words</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This app gives a comprehenisve overview of the World Values Survey data and allows you to explore
+with regional and country as units of analyses and making comparisons.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The question'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The App'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The App (continued)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Final words'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
