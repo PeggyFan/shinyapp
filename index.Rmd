@@ -18,20 +18,7 @@ This app presents data from a question from the World Values Survey (one of the 
 The analyses examine the data by gender and education attainment breakdown as those two criteria are relevant characteristcs to civic participation.
 
 ---
-## The data
 
-The raw data from World Values Survey was cleaned and the variables of interest, gender and educational attainment, were extracted along with some country-level information. The data is further aggregated to the country level for this exercise. However, with a dataset like this:
-
-```{r, echo=FALSE, comment=NULL}
-wvs_c <- read.csv("/Users/peggyfan/Downloads/R_data/Developing_data_products/wvs_c")
-wvs_c <- wvs_c[, -1]
-wvs_c <- wvs_c[1:2, ]
-wvs_c 
-````
-
-It is difficult to observe the trends in terms of regions, gender, and education.
-
----
 ## The App
 
 The app gives graphical and tabular representations of the data to faciliate data exploration.
