@@ -9,30 +9,38 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## The question
-
-Civic participation is seen as a cornerstone of democracy in fields of political science, sociology, and education. One way to measure civic participation is looking at the degree to which an individual participates in organizations outside of family and work. Such organizations or associations are often the foundation to social capital and network. 
-
+## Background
 This app presents data from a question from the World Values Survey (one of the oldest cross-national social surveys in the world) that asks: Are you a member of the following association: sports, arts, labor, politics, environment, women's rights, human rights, charity, or other.
 
-The analyses examine the data by gender and education attainment breakdown as those two criteria are relevant characteristcs to civic participation.
+Looking at the degree to which an individual participates in organizations outside of family and work has been one measure of civic participation in the literature.
+
+The App aims to contribute to the study of civic participation. It provides some exploratory analyses and examines the data by gender and education attainment.
 
 ---
 
 ## The App
 
-The app gives graphical and tabular representations of the data to faciliate data exploration.
-It provides the descriptive analyses of associational membership on geagraphy, gender, and education attainment. 
+The app gives graphical and tabular representations of the data to faciliate exploration.
 
-The app gives regional averages by categories, such as this:
+It shows the geographical distribution of associational membership.
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
 
---- 
-## The App (continued)
-The app also gives country-specific data on gender and education attainment, such as:
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2.png) 
+
+
+--- &twocol
+
+## The App (continued)
+The app gives regional averages by categories and also country-specific data on gender and education attainment, such as:
+
+*** =left
+
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
+
+*** =right
+
+![plot of chunk unnamed-chunk-4](assets/fig/unnamed-chunk-4.png) 
 
 ---
 
