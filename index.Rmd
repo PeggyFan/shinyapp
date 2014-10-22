@@ -25,6 +25,7 @@ The app gives graphical and tabular representations of the data to faciliate exp
 It shows the geographical distribution of associational membership.
 
 ```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE, results='hide'}
+
 library(rworldmap)
 
 wvs_c <- read.csv("/Users/peggyfan/Downloads/R_data/Developing_data_products/wvs_c")
