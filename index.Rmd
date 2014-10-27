@@ -20,9 +20,7 @@ The App aims to contribute to the study of civic participation. It provides some
 
 ## The App
 
-The app gives graphical and tabular representations of the data to faciliate exploration.
-
-It shows the geographical distribution of associational membership.
+The app gives graphical and tabular representations of the data to faciliate exploration. It shows the geographical distribution of associational membership.
 
 ```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE, results='hide'}
 
@@ -38,7 +36,7 @@ world <- joinCountryData2Map(wvs_c
                              ,mapResolution="li")
 ```
 
-```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, comment=NULL, message=FALSE, warning=FALSE, fig.height=6, fig.width=10}
 
 mapCountryData(world, colourPalette=colourPalette1      
                ,mapTitle='Percent of respondents belonging to an association'

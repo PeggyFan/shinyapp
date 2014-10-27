@@ -20,9 +20,7 @@ The App aims to contribute to the study of civic participation. It provides some
 
 ## The App
 
-The app gives graphical and tabular representations of the data to faciliate exploration.
-
-It shows the geographical distribution of associational membership.
+The app gives graphical and tabular representations of the data to faciliate exploration. It shows the geographical distribution of associational membership.
 
 
 
