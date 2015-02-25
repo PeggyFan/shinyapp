@@ -5,4 +5,4 @@ This app gives a comprehenisve overview of the World Values Survey data and allo
 
 An introduction to the app is here: http://peggyfan.github.io/shinyapp/#1
 
-Check out the app at http://rpubs.com/Snowcreeks/49867
+Check out the app at https://peggyfan.shinyapps.io/shinyapps/
